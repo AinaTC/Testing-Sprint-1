@@ -18,7 +18,7 @@ console.log(((Num1, Num2) => Num1+Num2)(3,2));
  La classe inclourà un mètode dirNom que imprimeixi per consola el paràmetre 
  'nom'. Invoca el mètode dirNom des de fora de la classe. */
 
- export class Persona {
+ class Persona {
     constructor(nom){
         this.nom = nom;
     };
@@ -31,7 +31,7 @@ console.log(((Num1, Num2) => Num1+Num2)(3,2));
 /*Escriu una function creadora d'objectes que faci instàncies
  d'una classe abstracta. Invoca-la amb diferents definicions. */
 
-export class AbstractClass {
+class AbstractClass {
     constructor(x) {
         this.x = x;
         if(this.constructor === AbstractClass){
@@ -40,7 +40,7 @@ export class AbstractClass {
     }
 }
 
-export class SubClass extends AbstractClass {
+class SubClass extends AbstractClass {
     constructor(x, y) {
         super(x);
         this.y = y;
