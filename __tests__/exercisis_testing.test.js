@@ -56,11 +56,14 @@ describe("Testeja la correcta execució de les funcions per sumar, restar, multi
  
  const asynFun = asaw.asynFun;
  describe("Crea els tests corresponents per verificar el funcionament de l'exercici Async / Await Nivell 2 - Exercici 1", () => {
+  console.log = jest.fn();
   test("Verify asynFun", () => {
     asynFun().then( data => {
     expect(data).toBeUndefined();
+    expect(console.log).toHaveBeenCalledTimes(1);
+    expect(console.log).toHaveBeenLastCalledWith('Promesa resolta');
     });      
-})
+  })
 })
 
 
